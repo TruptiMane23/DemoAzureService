@@ -1,3 +1,4 @@
-Flask
-uvicorn
+flask
 pyodbc
+uvicorn
+gunicorn
