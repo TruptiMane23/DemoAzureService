@@ -14,8 +14,13 @@ def home():
 
 # Connect to the database
 def get_db_connection():
-    conn = pyodbc.connect(DB_CONNECTION)
-    return conn
+    try:
+        conn = pyodbc.connect(DB_CONNECTION)
+        return conn
+    except Exception as e:
+        print(f"Database connection error: {str(e)}")
+        return None
+
 
 
 # Get all tasks
