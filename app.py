@@ -5,7 +5,8 @@ import pyodbc
 app = Flask(__name__)
 
 
-DB_CONNECTION = os.getenv("AZURE_SQL_CONNECTION", "DRIVER={ODBC Driver 17 for SQL Server};SERVER=tcp:taskdb-server.database.windows.net,1433;DATABASE=TaskDB;UID=TruptiMane23;PWD=Frankfurt@2020")
+DB_CONNECTION = os.getenv("AZURE_SQL_CONNECTION")
+# "DRIVER={ODBC Driver 17 for SQL Server};SERVER=tcp:taskdb-server.database.windows.net,1433;DATABASE=TaskDB;UID=TruptiMane23;PWD=Frankfurt@2020"
 
 # Home route
 @app.route("/")
